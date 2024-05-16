@@ -16,7 +16,7 @@ class User(models.Model):
     last_name = models.CharField(max_length=55)
     age = models.IntegerField()
     birth_date = models.DateField()
-    gender = models.ForeignKey()
+    gender = models.ForeignKey(Gender, on_delete=models.CASCADE)
     username = models.CharField(max_length=55)
     password = models.CharField(max_length=255)
 
